@@ -48,6 +48,9 @@ if(isset($_POST['makeReservation'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make a Reservation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -62,14 +65,16 @@ if(isset($_POST['makeReservation'])){
             justify-content: center;
             align-items: center;
             padding: 20px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/home_bg.jpg') no-repeat center center fixed;
             background-size: cover;
+            margin: 0;
+            background-image: url("images/background.jpg");
+
         }
 
         .reservation-container {
-            background: rgba(19, 15, 8, 0.6);
+            background: rgba(0, 0, 0, 0.46);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(215, 203, 190, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.15);
             max-width: 1000px;
             width: 100%;
             padding: 40px;
@@ -79,20 +84,22 @@ if(isset($_POST['makeReservation'])){
 
         .back-btn {
             display: inline-block;
-            color: #D7CBBE;
+            color: #c79a5b;
             text-decoration: none;
             margin-bottom: 20px;
         }
 
         .back-btn:hover {
-            color: #645A4E;
+            color: #8d6d41ff;
         }
 
         h1 {
-            color: #D7CBBE;
-            font-size: 28px;
+            color: #c79a5b;
+            font-size: 35px;
             margin-bottom: 10px;
             text-align: center;
+            font-family: Bebas Neue;
+            font-weight:3;
         }
 
         .subtitle {
@@ -134,7 +141,7 @@ if(isset($_POST['makeReservation'])){
         }
 
         .input-wrapper:focus-within {
-            border-color: #645A4E;
+            border-color: #c79a5b;
         }
 
         .input-wrapper i {
@@ -176,8 +183,8 @@ if(isset($_POST['makeReservation'])){
             margin-top: 20px;
             border: none;
             border-radius: 8px;
-            background: #645A4E;
-            color: #fff;
+            background: #c79a5b;
+            color: black;
             font-weight: bold;
             font-size: 15px;
             cursor: pointer;
@@ -225,9 +232,10 @@ if(isset($_POST['makeReservation'])){
 </head>
 <body>
     <div class="reservation-container">
-        <a href="homepage.php" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
+
+    <a href="javascript:history.back()" class=" back-btn back-btn-fixed">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c79a5b"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+    </a>
 
         <h1><i class="fas fa-utensils"></i> Make a Reservation</h1>
         <p class="subtitle">Reserve your table and enjoy an unforgettable dining experience</p>
